@@ -19,4 +19,4 @@ typedef struct lista
 lista* crear();
 int esVaciaLista(lista* l);
 void agregar(lista* l, char* pal);
-void imprimir(lista* l);
+void imprimir(lista* l,FILE*);

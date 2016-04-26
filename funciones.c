@@ -21,8 +21,6 @@ void agregar(lista* l, char* pal){
 	aux=l->primeraP;
 	int esta=0;
 	while(aux!=NULL){
-		printf("pal: %s\n",pal );
-		printf("comp: %s\n", aux->nombre);
 		if (!strcmp(aux->nombre,pal))
 		{
 			aux->rep++;
@@ -38,11 +36,9 @@ void agregar(lista* l, char* pal){
 		nuevaP->sig = NULL;
 		nuevaP->rep = 1;
 		strcpy(nuevaP->nombre, pal);
-		printf("Después del strcpy: %s\n", nuevaP->nombre);
 		if (esVaciaLista(l))
 		{
 			l->primeraP=nuevaP;
-			printf("Agregada (primera):%s\n", l->primeraP->nombre);
 		}
 		else{
 			aux=l->primeraP;
@@ -50,18 +46,17 @@ void agregar(lista* l, char* pal){
 				aux=aux->sig;
 			}
 			aux->sig=nuevaP;
-			printf("Agregada (no primera):%s\n", aux->nombre);
 		}
 	}
 
 		
 }
 
-void imprimir(lista* l){
+void imprimir(lista* l,FILE* fp){
 	palabra* aux;
 	aux=l->primeraP;
 	while (aux != NULL){
-		printf("%s %d\n",aux->nombre, aux->rep);
+		fprintf(fp,"%s %d\n",aux->nombre, aux->rep);
 		aux=aux->sig;
 	}
 }
