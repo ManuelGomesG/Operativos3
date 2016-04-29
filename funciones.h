@@ -13,10 +13,14 @@ typedef struct palabra
 
 typedef struct lista
 {
-	palabra* primeraP;
+	palabra* primeraP;	//primero
 } lista;
 
 lista* crear();
 int esVaciaLista(lista* l);
-void agregar(lista* l, char* pal);
+void agregar(lista* l, char* pal, int n);
 void imprimir(lista* l,FILE*);
+void imprimirP(lista* l);
+int contarE(lista* l);
+lista* ordenarR(lista* l);
+void insertar(lista* l, char* pal, int repe, int pos);
