@@ -1,8 +1,14 @@
-/*
- *
+/*03/05/2016
+ *Autor: Manuel Gomes 11-10375
+ *Descripción: Archivo con las funciones empeadas en la resolución del problema
  */
 
 #include "funciones.h"
+
+/*
+Función que crea una lista, reservando su espacio en memoria.
+*/
+
 
 lista* crear(){
 	lista* l;
@@ -11,6 +17,14 @@ lista* crear(){
 	return l;
 }
 
+
+
+
+/*
+Función que, dada una lista revisa si esta es vacía.
+Una lista es vacía si no tiene primer elemento, es decir,
+el apuntador al primer elemento es NULL.
+*/
 int esVaciaLista(lista* l) {
 	if ( l->primeraP == NULL ) {
 		return 1;
@@ -18,6 +32,12 @@ int esVaciaLista(lista* l) {
 	return 0;
 }
 
+
+
+/*
+Función que agrega un elemento al final de la lista.
+En este caso agrega un elemento de tipo palabra.
+*/
 
 void agregar(lista* l, char* pal, int n){
 	palabra* aux;
@@ -55,6 +75,10 @@ void agregar(lista* l, char* pal, int n){
 		
 }
 
+/*
+Función que imprime en pantalla el contenido de una lista.
+
+*/
 void imprimirP(lista* l){
 	palabra* aux;
 	aux=l->primeraP;
@@ -66,6 +90,10 @@ void imprimirP(lista* l){
 	printf("--------- Fin     ----------\n");
 }
 
+/*
+Función que imprime en un archivo dado el contenido de la lista
+(palabras y repeticiones).
+*/
 
 void imprimir(lista* l,FILE* fp){
 	palabra* aux;
@@ -75,7 +103,10 @@ void imprimir(lista* l,FILE* fp){
 		aux=aux->sig;
 	}
 }
+/*
 
+Función que cuenta la cantidad de elementos de una lista.
+*/
 int contarE(lista* l){
 	int Ele = 0;
 	palabra* aux;
@@ -87,7 +118,9 @@ int contarE(lista* l){
 	return Ele;
 }
 
-
+/*
+Función que inserta un elemento en unalista en la posición dada.
+*/
 
 void insertar(lista* l, char* pal, int repe, int pos){
 	palabra* aux;
@@ -112,7 +145,11 @@ void insertar(lista* l, char* pal, int repe, int pos){
 	}
 	
 }
-
+/*Función que dada una lista de palabras, genera una lista con
+los mismos elementos pero estos apareceran de manera ordenada 
+con respencto a los parámetros requeridos para la asignación
+(número de apariciones y lyuego orden alfabetico)
+*/
 lista* ordenarR(lista* l){
 	int ele = contarE(l);
 	int i;		//Entero para iterar sobre la lista dada.

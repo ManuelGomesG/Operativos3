@@ -1,3 +1,10 @@
+/*03/05/2016
+ *Autor: Manuel Gomes 11-10375
+ *Descripción: Estructuras y firmas de las funciones utilizadas en
+ * desarrollo de la actividad.
+ */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -1,3 +1,11 @@
+ #03/05/2016
+ #Autor: Manuel Gomes 11-10375
+ #Descripción: Makefile de la tarea, make compila y make clean 
+ #borra los objatos y ejecutables relacionados.
+ #
+
+
+
 CC=gcc
 CFLAGS=-g -Wall
 

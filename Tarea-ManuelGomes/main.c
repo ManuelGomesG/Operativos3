@@ -1,4 +1,4 @@
-/*
+/*03/05/2016
  *Autor: Manuel Gomes 11-10375
  *Descripción: Programa que lee palabras de un archivo que cumple con ciertas 
  *condiciones, cuenta las repeticiones y luego imprime todas las palabras en 
