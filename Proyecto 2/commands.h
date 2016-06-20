@@ -7,4 +7,4 @@
 #include <dirent.h>
 
 
-void ls(char* path);
+void ls(const char* path);
